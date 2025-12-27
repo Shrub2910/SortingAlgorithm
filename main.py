@@ -5,14 +5,14 @@ import sys
 pygame.init()
 
 # some predefined variables
-background_color = (255, 255, 255)
+
 
 
 # pygame window settings
 screen = pygame.display.set_mode((1920, 1080))
 clock = pygame.time.Clock()
 pygame.display.set_caption("Sorting Algorithm")
-
+screen.fill("white")
 
 running = True
 
@@ -22,11 +22,10 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     # program code below
-    surface.fill((background_color))
 
     # dont change what is below this
-    pygame.display.flip
-    clock.tick()
+    pygame.display.flip()
+    clock.tick(60)
 
 pygame.quit()
 sys.exit()
