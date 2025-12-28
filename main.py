@@ -1,5 +1,4 @@
 # imports and setup
-import math
 import pygame
 import random
 import sys
