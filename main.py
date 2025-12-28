@@ -1,5 +1,5 @@
 # imports and setup
-from unittest import TextTestResult
+import math
 import pygame
 import random
 import sys
@@ -12,7 +12,9 @@ height = 10
 test = 0
 
 # pygame window settings
-screen = pygame.display.set_mode((1920, 1080))
+screenX = 1920
+screenY = 1080
+screen = pygame.display.set_mode((screenX, screenY))
 clock = pygame.time.Clock()
 pygame.display.set_caption("Sorting Algorithm")
 screen.fill("black")
@@ -26,8 +28,11 @@ while running:
             running = False
     # program code below
 
-    while test != 100:
-        pygame.draw.rect(screen, line_color, pygame.Rect(start_x_cord, 1020, 10, 30))
+    while test != 128:
+
+        y = screenY - height
+        pygame.draw.rect(screen, line_color, pygame.Rect(start_x_cord, y, 15, height))
+        height = random.randrange(10, 1080)
         start_x_cord += 15
         test+=1
 
