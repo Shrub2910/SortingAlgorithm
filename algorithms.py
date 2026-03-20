@@ -5,7 +5,7 @@ def selection_sort(arr):
             if arr[min_idx] > arr[j]:
                 min_idx = j
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
-
+        yield i, min_idx
 
 def insertionSort(arr):
     for i in range(1, len(arr)):
@@ -15,6 +15,7 @@ def insertionSort(arr):
                 arr[j + 1] = arr[j]
                 j -= 1
         arr[j + 1] = key
+        yield (j+1,)
 
 
 def bubbleSort(arr):
@@ -23,4 +24,5 @@ def bubbleSort(arr):
         for j in range(0, n-i-1):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
+                yield j, j+1
 
